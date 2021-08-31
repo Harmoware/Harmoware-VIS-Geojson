@@ -1,0 +1,29 @@
+{
+  "name": "harmoware-geojson",
+  "version": "1.0.0",
+  "description": "harmoware-geojson",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 3030 --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "harmoware-geojson",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "harmoware-vis": "^1.7.1",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
