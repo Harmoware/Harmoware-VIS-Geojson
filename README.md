@@ -9,7 +9,7 @@ cd Harmoware-VIS-Geojson
 npm install
 ```
 ## Enter your Mapbox access token in the source code
-src\containers\app.js : Line 6
+src\containers\app.js : Line 8
 ```
 6 | const MAPBOX_TOKEN = '< Enter your Mapbox access token >'; //Acquire Mapbox accesstoken
 ```
