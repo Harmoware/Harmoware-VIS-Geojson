@@ -5,7 +5,7 @@ import {
 } from 'harmoware-vis';
 import GeoJsonInput from '../components/geojson-input'
 
-const MAPBOX_TOKEN = ''; //Acquire Mapbox accesstoken
+const MAPBOX_TOKEN = 'pk.eyJ1IjoieW11Y3lzdGsiLCJhIjoiY2oxdmhhbmd0MDAwYjM4bXd1YWVodWNrcCJ9.aWxoDc0UXMVGB96b82GFKQ'; //Acquire Mapbox accesstoken
 
 const getFillColor = {
   "地区公園（カントリーパーク）":[85,107,47],
@@ -32,6 +32,7 @@ class App extends Container {
       elevationScale: 1,
       popup: [0, 0, ''],
     };
+    this.props.actions.setInitialViewChange(false)
     this.props.actions.setViewport({
       longitude:139.48764008539553,latitude:35.33898340780633,zoom:12.0
     });
@@ -139,7 +140,7 @@ class App extends Container {
             mapboxApiAccessToken={MAPBOX_TOKEN}
             layers={[
               new MovesLayer({ routePaths, movesbase, movedData,
-                clickedObject, actions, optionVisible }),
+                clickedObject, actions, optionVisible, pickable:false }),
               name === "parkPolygon" ?
                 new GeoJsonLayer({
                   id: 'geojson-layer-parkPolygon-' + selectpopulation,
